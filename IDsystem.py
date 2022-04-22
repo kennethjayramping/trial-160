@@ -1,9 +1,11 @@
-#pip install SpeechRecogition, pip install pyaudio
+#pip install SpeechRecogition
+#pip install pyaudio
 from numpy import source
 import speech_recognition as sr
 import os
 
-from playsound import playsound  #pip install playsound==1.2.2
+from playsound import playsound
+#pip install playsound==1.2.2
 
 from csv import DictWriter
 
