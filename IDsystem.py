@@ -10,7 +10,7 @@ from playsound import playsound
 from csv import DictWriter
 
 
-idIdentify = str(2022)  ##mao ni siya tung string dapat na gikan sa pag identify sa ID
+idIdentify = str('msu 2022')  ##mao ni siya tung string dapat na gikan sa pag identify sa ID
 
 def main():
     r = sr.Recognizer()
@@ -24,9 +24,10 @@ def main():
         
 
         try:
-            print("Confirming your ID code. Please wait... ")
             idcodeSTR = r.recognize_google(audio)
-            print("Logging you in... ")
+            print("Confirming your ID code. Please wait... ")
+            #idcodeSTR = r.recognize_google(audio)
+            #print("Logging you in... ")
             
             if idcodeSTR == idIdentify:
                 
@@ -47,6 +48,7 @@ def main():
                     # Close the file object
                     f_object.close()
                 
+                print("Logging you in... ")
                 print("You have logged in successfully.")
                 playsound('success.mp3')
 
